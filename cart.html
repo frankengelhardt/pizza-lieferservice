@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#menu">Menü</a></li>
+                <li><a href="index.html#about-us">Über uns</a></li>
+                <li><a href="index.html#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <h1>Warenkorb</h1>
+    </header>
+
+    <main>
+        <!-- Warenkorb-Bereich -->
+        <section id="cart">
+            <h2>Ihr Warenkorb</h2>
+            <ul id="cart-items">
+                <!-- Warenkorb-Elemente werden hier dynamisch eingefügt -->
+            </ul>
+            <div id="cart-summary">
+                Gesamtpreis: <span id="total-price">0</span> €
+            </div>
+        </section>
+
+        <!-- Bestellformular -->
+        <section id="order-form">
+            <h2>Bestellinformationen</h2>
+            <form id="order-form">
+                <label for="full-name">Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="street">Straße:</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="house-number">Hausnummer:</label>
+                <input type="text" id="house-number" name="house-number" required>
+
+                <label for="phone">Telefon (optional):</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="email">E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Bestellung abschließen</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza Service</p>
+    </footer>
+
+    <!-- Einbindung der JavaScript-Datei für die Warenkorbfunktionalität und das Absenden der Bestellung -->
+    <script src="cart.js"></script>
+</body>
+
+</html>

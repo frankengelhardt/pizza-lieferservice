@@ -1,0 +1,276 @@
+/* Grundlegende Reset */
+* {
+    box-sizing: border-box; /* Setzt den Box-Modus auf border-box für alle Elemente, damit padding und border zur Gesamtgröße des Elements zählen */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Setzt die Schriftart auf Arial, mit einer Fallback-Option zu sans-serif */
+    margin: 0; /* Entfernt den Standard-Abstand des Browsers */
+    padding: 0; /* Entfernt das Standard-Padding */
+    background-color: #ffffff; /* Setzt den Hintergrund auf weiß */
+    color: #333333; /* Setzt die Textfarbe auf ein dunkles Grau */
+}
+
+/* Header */
+header {
+    background-color: #f4f4f4; /* Setzt den Hintergrund des Headers auf ein helles Grau */
+    padding: 20px; /* Fügt innen Abstand hinzu */
+    text-align: center; /* Zentriert den Text */
+    position: fixed; /* Fixiert den Header am oberen Rand des Viewports */
+    width: 100%; /* Der Header soll die volle Breite einnehmen */
+    top: 0; /* Setzt den Header an den oberen Rand */
+    left: 0; /* Setzt den Header an den linken Rand */
+    z-index: 1000; /* Stellt sicher, dass der Header immer oben bleibt */
+}
+
+nav ul {
+    list-style-type: none; /* Entfernt die Standard-Aufzählungszeichen */
+    padding: 0; /* Entfernt Padding */
+}
+
+nav ul li {
+    display: inline; /* Listenelemente nebeneinander anzeigen */
+    margin: 0 15px; /* Abstand zwischen den Listenelementen */
+}
+
+nav a {
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    color: #333333; /* Setzt die Textfarbe der Links auf dunkelgrau */
+    font-weight: bold; /* Setzt die Schrift auf fett */
+    transition: color 0.3s; /* Fügt einen sanften Übergang bei Farbänderungen hinzu */
+}
+
+nav a:hover {
+    color: #f8b400; /* Setzt die Farbe des Links beim Hover auf ein Gelb */
+}
+
+h1 {
+    margin: 0; /* Entfernt den Standard-Abstand */
+    color: #f8b400; /* Setzt die Textfarbe auf Gelb */
+}
+
+/* Hauptbereich */
+main {
+    padding: 120px 20px 20px; /* Fügt Padding oben und an den Seiten hinzu, um den Inhalt nicht vom fixierten Header zu verdecken */
+}
+
+/* Menü-Styling */
+.menu-item {
+    background-color: #ffffff; /* Setzt den Hintergrund auf Weiß */
+    border: 1px solid #ddd; /* Fügt einen leichten grauen Rand hinzu */
+    border-radius: 5px; /* Abgerundete Ecken */
+    padding: 15px; /* Fügt innen Abstand hinzu */
+    margin: 10px 0; /* Abstand zwischen den Menüelementen */
+    transition: transform 0.3s ease; /* Fügt eine sanfte Transformation hinzu, wenn der Menüpunkt interagiert */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu */
+    color: #333333; /* Setzt den Text auf dunkelgrau */
+    display: flex; /* Verwenden von Flexbox für die Anordnung */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    max-width: 650px; /* Maximale Breite des Elements */
+    width: 100%; /* Nimmt die gesamte verfügbare Breite ein */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Verschiebt das Element leicht nach oben bei Hover */
+    background-color: #f9f9f9; /* Ändert den Hintergrund bei Hover */
+}
+
+.pizza-image {
+    width: 100%; /* Setzt die Breite des Bildes auf 100% des Container-Elements */
+    max-width: 200px; /* Maximale Breite von 200px */
+    height: auto; /* Erhält das Seitenverhältnis */
+    border-radius: 5px; /* Abgerundete Ecken */
+    margin: 10px 0; /* Abstand oben und unten */
+}
+
+.menu-item-content {
+    margin-left: 15px; /* Abstand links vom Bild */
+    flex-grow: 1; /* Lässt den Inhalt wachsen, um den verfügbaren Raum zu füllen */
+}
+
+.menu-item h3 {
+    margin: 0 0 10px 0; /* Entfernt oberen Rand und fügt unteren Rand hinzu */
+    color: #f8b400; /* Setzt die Farbe des Titels auf Gelb */
+}
+
+.menu-item p {
+    margin: 0 0 10px 0; /* Entfernt den oberen Rand und fügt unteren Rand hinzu */
+    color: #666666; /* Setzt den Text auf ein helleres Grau */
+}
+
+.price {
+    font-weight: bold; /* Macht den Preis fett */
+    color: #f8b400; /* Setzt den Preis in Gelb */
+}
+
+.order-button {
+    background-color: #28a745; /* Setzt den Hintergrund des Buttons auf Grün */
+    color: white; /* Setzt die Textfarbe auf Weiß */
+    border: none; /* Entfernt den Rand des Buttons */
+    padding: 10px 15px; /* Fügt Padding hinzu */
+    cursor: pointer; /* Ändert den Cursor beim Überfahren des Buttons */
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: background-color 0.3s; /* Sanfter Übergang bei Farbänderung */
+}
+
+.order-button:hover {
+    background-color: #218838; /* Setzt den Button-Hintergrund auf einen dunkleren Grünton bei Hover */
+}
+
+/* Warenkorb */
+#cart {
+    background-color: #fff; /* Hintergrund des Warenkorbs auf Weiß setzen */
+    border: 2px solid #f8b400; /* Rand in Gelb */
+    border-radius: 8px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    width: 350px; /* Feste Breite des Warenkorbs */
+    max-height: 500px; /* Maximale Höhe */
+    overflow-y: auto; /* Ermöglicht vertikales Scrollen, wenn der Inhalt den verfügbaren Raum überschreitet */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    position: fixed; /* Der Warenkorb bleibt immer an derselben Position */
+    right: 20px; /* Positioniert den Warenkorb rechts im Bildschirm */
+    top: 120px; /* Positioniert den Warenkorb 120px vom oberen Rand */
+    visibility: hidden; /* Versteckt den Warenkorb initial */
+    opacity: 0; /* Unsichtbar machen */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s; /* Sanfte Übergänge für die Sichtbarkeit */
+    z-index: 1100; /* Der Warenkorb bleibt immer oben */
+    font-family: 'Arial', sans-serif; /* Setzt die Schriftart */
+}
+
+#cart.show {
+    visibility: visible; /* Zeigt den Warenkorb */
+    opacity: 1; /* Macht den Warenkorb sichtbar */
+    transition: opacity 0.3s ease-in-out; /* Sanfter Übergang der Sichtbarkeit */
+}
+
+#cart h2 {
+    margin-top: 0; /* Entfernt den oberen Rand */
+    color: #f8b400; /* Setzt die Farbe des Titels auf Gelb */
+    font-size: 22px; /* Größere Schriftgröße */
+    font-weight: 600; /* Fett */
+    text-align: center; /* Zentriert den Text */
+    margin-bottom: 20px; /* Fügt einen unteren Rand hinzu */
+}
+
+#cart-items {
+    list-style: none; /* Entfernt Aufzählungszeichen */
+    padding: 0; /* Entfernt das Padding */
+    margin: 0; /* Entfernt den Margin */
+}
+
+#cart-items li {
+    display: flex; /* Flexbox für die Items */
+    justify-content: space-between; /* Verteilt die Elemente gleichmäßig */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    margin-bottom: 15px; /* Fügt Abstand zwischen den Listenelementen hinzu */
+    padding: 12px 15px; /* Fügt Padding hinzu */
+    background-color: #f9f9f9; /* Setzt den Hintergrund in ein sehr helles Grau */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+/* X-Button für den Warenkorb */
+.remove-item {
+    width: auto; /* Die Breite passt sich dem Inhalt an */
+    padding: 5px 10px; /* Fügt Padding hinzu */
+    font-size: 14px; /* Kleinere Schriftgröße */
+    background: red; /* Roter Hintergrund */
+    color: white; /* Weißer Text */
+    border: none; /* Kein Rand */
+    cursor: pointer; /* Zeigt den Pointer-Cursor an */
+    border-radius: 5px; /* Abgerundete Ecken */
+}
+
+.remove-item:hover {
+    background: darkred; /* Dunklerer Rotschattton bei Hover */
+}
+
+/* Formular-Styling */
+form {
+    max-width: 400px; /* Maximale Breite des Formulars */
+    margin: 20px auto; /* Zentriert das Formular und fügt oben und unten Abstand hinzu */
+    padding: 20px; /* Innenabstand */
+    background: #ffffff; /* Weißer Hintergrund */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    display: flex; /* Flexbox für das Formular */
+    flex-direction: column; /* Anordnung der Formularelemente von oben nach unten */
+    gap: 15px; /* Abstand zwischen den Elementen */
+}
+
+form h2 {
+    text-align: center; /* Zentriert den Titel */
+    color: #333; /* Setzt die Farbe des Titels */
+}
+
+form label {
+    font-size: 14px; /* Kleinere Schriftgröße */
+    font-weight: bold; /* Fett */
+    color: #555; /* Graue Farbe */
+}
+
+input,
+button {
+    padding: 10px; /* Fügt Padding hinzu */
+    font-size: 16px; /* Größere Schrift */
+    border: 1px solid #ddd; /* Grauer Rand */
+    border-radius: 5px; /* Abgerundete Ecken */
+}
+
+input:focus {
+    outline: none; /* Entfernt den Standard-Fokus-Rahmen */
+    border-color: #f8b400; /* Gelbe Farbe, wenn fokussiert */
+    box-shadow: 0 0 5px rgba(248, 180, 0, 0.5); /* Gelber Schatten beim Fokus */
+}
+
+button[type=submit] {
+    background-color: #f8b400; /* Gelb */
+    color: white; /* Weißer Text */
+    cursor: pointer; /* Zeigt den Pointer-Cursor an */
+    transition: background-color 0.3s; /* Sanfter Übergang bei Hover */
+    border: none; /* Entfernt den Rand */
+}
+
+button[type=submit]:hover {
+    background-color: #e0a200; /* Ein dunkleres Gelb bei Hover */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Zentriert den Text */
+    padding: 20px; /* Fügt Padding hinzu */
+    background-color: #f4f4f4; /* Helles Grau */
+    margin-top: 40px; /* Abstand vom Hauptinhalt */
+}
+
+/* Letzte Bestellung Styling */
+#last-order {
+    margin-top: 20px; /* Fügt Abstand vom vorherigen Abschnitt hinzu */
+    padding: 20px; /* Fügt Padding hinzu */
+    background-color: #f9f9f9; /* Ein anderes helles Grau */
+    border: 1px solid #ddd; /* Fügt einen feinen grauen Rand hinzu */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+#order-details {
+    margin-top: 10px; /* Fügt zusätzlichen Abstand hinzu */
+    font-size: 14px; /* Etwas kleinere Schrift */
+}
+
+#order-details h2 {
+    color: #f8b400; /* Gelb */
+    margin-bottom: 10px; /* Abstand vom Titel */
+}
+
+#order-details p {
+    margin: 5px 0; /* Abstand oben und unten */
+}
+
+#order-details ul {
+    padding-left: 20px; /* Fügt Padding für Listen hinzu */
+}
+
+#order-details li {
+    margin: 5px 0; /* Abstand in der Liste */
+}

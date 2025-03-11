@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menü</a></li>
+                <li><a href="#about-us">Über uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <h1>Pizza Service</h1>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Unser Menü</h2>
+            <!-- Menüpunkt für Pizza Margherita -->
+            <div class="menu-item">
+                <img src="images/margherita.jpg" alt="Pizza Margherita" class="pizza-image">
+                <div class="menu-item-content">
+                    <h3>Pizza Margherita</h3>
+                    <p>Klassische Pizza mit Tomatensauce, Mozzarella und Basilikum.</p>
+                    <p class="price">7.50 €</p>
+                    <!-- Button zum Bestellen, die Attribute data-name und data-price werden von JavaScript verwendet -->
+                    <button class="order-button" data-name="Pizza Margherita" data-price="7.50">Bestellen</button>
+                </div>
+            </div>
+            <!-- Menüpunkt für Pizza Salami -->
+            <div class="menu-item">
+                <img src="images/pepperoni.jpg" alt="Pizza Salami" class="pizza-image">
+                <div class="menu-item-content">
+                    <h3>Pizza Salami</h3>
+                    <p>Pizza mit Tomatensauce, Mozzarella und Salami.</p>
+                    <p class="price">8.00 €</p>
+                    <!-- Button zum Bestellen, die Attribute data-name und data-price werden von JavaScript verwendet -->
+                    <button class="order-button" data-name="Pizza Salami" data-price="8.00">Bestellen</button>
+                </div>
+            </div>
+            <!-- Menüpunkt für Vegetarische Pizza Mexican-Style -->
+            <div class="menu-item">
+                <img src="images/veg_pizza_mexican.jpg" alt="Vegetarische Pizza Mexican-Style" class="pizza-image">
+                <div class="menu-item-content">
+                    <h3>Vegetarische Pizza Mexican-Style</h3>
+                    <p>Pikanter Genuss mit Bohnen, Mais, Paprika und Jalapeños.</p>
+                    <p class="price">9.00 €</p>
+                    <!-- Button zum Bestellen, die Attribute data-name und data-price werden von JavaScript verwendet -->
+                    <button class="order-button" data-name="Vegetarische Pizza Mexican-Style"
+                        data-price="9.00">Bestellen</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abschnitt für die Anzeige der letzten Bestellung -->
+        <section id="last-order">
+            <h2>Letzte Bestellung</h2>
+            <div id="order-details">
+                <!-- Hier werden die Bestelldaten angezeigt -->
+            </div>
+        </section>
+
+        <section id="about-us">
+            <h2>Über uns</h2>
+            <p>Wir sind Ihr zuverlässiger Pizza-Lieferservice mit frischen Zutaten und schneller Lieferung.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Haben Sie Fragen? Kontaktieren Sie uns unter <a
+                    href="mailto:info@pizza-service.de">info@pizza-service.de</a>.</p>
+        </section>
+
+        <!-- Warenkorb-Bereich -->
+        <div id="cart">
+            <h2>Warenkorb</h2>
+            <ul id="cart-items">
+                <!-- Hier werden die Warenkorb-Elemente eingefügt -->
+            </ul>
+            <p>Gesamt: <span id="cart-total">0.00 €</span></p>
+            <!-- Button, um zur Warenkorbseite zu gelangen -->
+            <button onclick="window.location.href='cart.html'">Warenkorb</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza Service</p>
+    </footer>
+
+    <!-- Einbindung der JavaScript-Datei für die Warenkorbfunktionalität -->
+    <script src="script.js"></script>
+</body>
+
+</html>
