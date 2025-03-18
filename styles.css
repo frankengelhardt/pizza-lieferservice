@@ -62,7 +62,7 @@ main {
     padding: 15px; /* Fügt innen Abstand hinzu */
     margin: 10px 0; /* Abstand zwischen den Menüelementen */
     transition: transform 0.3s ease; /* Fügt eine sanfte Transformation hinzu, wenn der Menüpunkt interagiert */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu */
+    box-shadow: 17px 16px 8px rgba(0, 0, 0, 41%); /* Fügt einen leichten Schatten hinzu */
     color: #333333; /* Setzt den Text auf dunkelgrau */
     display: flex; /* Verwenden von Flexbox für die Anordnung */
     align-items: center; /* Zentriert den Inhalt vertikal */
