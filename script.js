@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Elemente für den Warenkorb und den Gesamtpreis im Warenkorb selektieren
     const cartList = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
-    const cartContainer = document.getElementById("cart");
+    const cartContainer = document.getElementById("cart-homepage");
     const orderDetailsContainer = document.getElementById("order-details");
 
     // Warenkorb aus dem localStorage laden, wenn vorhanden, ansonsten ein leeres Array erstellen
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 try {
                     let order = JSON.parse(orderData.order);
                     order.forEach(item => {
-                        orderDetailsHTML += `<li>${item.name} - ${item.price} €</li>`;
+                        orderDetailsHTML += `<li>${item.name} - ${item.price.toFixed(2)} €</li>`;
                     });
                 } catch (e) {
                     console.error("Error parsing order data:", e);

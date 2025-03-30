@@ -2,62 +2,66 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warenkorb</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warenkorb - Pizza Lieferservice</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html#menu">Menü</a></li>
-                <li><a href="index.html#about-us">Über uns</a></li>
-                <li><a href="index.html#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-        <h1>Warenkorb</h1>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html#menu">Menü</a></li>
+        <li><a href="index.html#about-us">Über uns</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <h1>Warenkorb</h1>
+  </header>
 
-    <main>
+  <main>
         <!-- Warenkorb-Bereich -->
-        <section id="cart">
-            <h2>Ihr Warenkorb</h2>
-            <ul id="cart-items">
+    <section id="cart">
+      <div class="content-wrapper">
+        <h2>Ihr Warenkorb</h2>
+        <ul id="cart-items">
                 <!-- Warenkorb-Elemente werden hier dynamisch eingefügt -->
-            </ul>
-            <div id="cart-summary">
-                Gesamtpreis: <span id="total-price">0</span> €
-            </div>
-        </section>
+        </ul>
+        <div id="cart-summary">
+          Gesamtpreis: <span id="total-price">0</span> €
+        </div>
+      </div>
+    </section>
 
         <!-- Bestellformular -->
-        <section id="order-form">
-            <h2>Bestellinformationen</h2>
-            <form id="order-form">
-                <label for="full-name">Name:</label>
-                <input type="text" id="full-name" name="full-name" required>
+    <section>
+      <div class="content-wrapper">
+        <h2>Bestellinformationen</h2>
+          <form id="order-form">
+            <label for="full-name">Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
 
-                <label for="street">Straße:</label>
-                <input type="text" id="street" name="street" required>
+            <label for="street">Straße:</label>
+            <input type="text" id="street" name="street" required>
 
-                <label for="house-number">Hausnummer:</label>
-                <input type="text" id="house-number" name="house-number" required>
+            <label for="house-number">Hausnummer:</label>
+            <input type="text" id="house-number" name="house-number" required>
 
-                <label for="phone">Telefon (optional):</label>
-                <input type="tel" id="phone" name="phone">
+            <label for="phone">Telefon (optional):</label>
+            <input type="tel" id="phone" name="phone">
 
-                <label for="email">E-Mail-Adresse:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" id="email" name="email" required>
 
-                <button type="submit">Bestellung abschließen</button>
-            </form>
-        </section>
+            <button type="submit">Bestellung abschließen</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>© <span id="currentYear"></span> Pizza Service</p>
+        <p>© <span id="currentYear"></span> Frank Engelhardt</p>
     </footer>
 
     <!-- Einbindung der JavaScript-Datei für die Warenkorbfunktionalität und das Absenden der Bestellung -->

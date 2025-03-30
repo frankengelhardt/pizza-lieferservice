@@ -1,0 +1,561 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   /*---------------------- General Styles --------------------*/
+
+   body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color:#333333;
+    text-decoration: none;
+  }
+
+  .content-wrapper {
+    max-width: 425px;
+    width: 85%;
+    margin: 20px 0;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  img {
+    width: 100%;
+    margin: 30px 0;
+    border-radius: 5px;
+  }
+
+  h1 {
+    color: #f8b400; /* Setzt die Textfarbe auf Gelb */
+  }
+
+  h3 {
+    color: #f8b400;
+  }
+
+  /*---------------------- Mobile Styles --------------------*/
+
+  /* Header styles */
+
+  header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 0;
+    background-color: #f4f4f4;
+    width: 100%
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  header nav a {
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  /* Menu item styles*/
+
+  .menu-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+    box-shadow: 17px 16px 8px rgba(0, 0, 0, 41%);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .price {
+    font-weight: bold; /* Macht den Preis fett */
+    color: #f8b400; /* Setzt den Preis in Gelb */
+  }
+
+  .order-button {
+    background-color: #28a745; /* Setzt den Hintergrund des Buttons auf Grün */
+    color: white; /* Setzt die Textfarbe auf Weiß */
+    border: none; /* Entfernt den Rand des Buttons */
+    padding: 10px 15px; /* Fügt Padding hinzu */
+    cursor: pointer; /* Ändert den Cursor beim Überfahren des Buttons */
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: background-color 0.3s; /* Sanfter Übergang bei Farbänderung */
+  }
+
+  /*Warenkorb Homepage Styles*/
+
+  #cart-homepage {
+    background-color: #fff; /* Hintergrund des Warenkorbs auf Weiß setzen */
+    border: 2px solid #f8b400; /* Rand in Gelb */
+    border-radius: 8px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    width: 80%; /* Feste Breite des Warenkorbs */
+    max-width: 275px;
+    max-height: 500px; /* Maximale Höhe */
+    overflow-y: auto; /* Ermöglicht vertikales Scrollen, wenn der Inhalt den verfügbaren Raum überschreitet */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    position: fixed; /* Der Warenkorb bleibt immer an derselben Position */
+    right: 2.5%; /* Positioniert den Warenkorb rechts im Bildschirm */
+    top: 120px; /* Positioniert den Warenkorb 120px vom oberen Rand */
+    visibility: hidden; /* Versteckt den Warenkorb initial */
+    opacity: 0; /* Unsichtbar machen */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s; /* Sanfte Übergänge für die Sichtbarkeit */
+    z-index: 1100; /* Der Warenkorb bleibt immer oben */
+  }
+
+  #cart-homepage.show {
+    visibility: visible; /* Zeigt den Warenkorb */
+    opacity: 1; /* Macht den Warenkorb sichtbar */
+    transition: opacity 0.3s ease-in-out; /* Sanfter Übergang der Sichtbarkeit */
+  }
+
+  #cart-homepage h2 {
+    color: #f8b400; /* Setzt die Farbe des Titels auf Gelb */
+    margin-bottom: 40px; /* Fügt einen unteren Rand hinzu */
+  }
+
+  #cart-items li {
+    display: flex; /* Flexbox für die Items */
+    justify-content: space-between; /* Verteilt die Elemente gleichmäßig */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    margin-bottom: 15px; /* Fügt Abstand zwischen den Listenelementen hinzu */
+    padding: 12px 15px; /* Fügt Padding hinzu */
+    background-color: #f9f9f9; /* Setzt den Hintergrund in ein sehr helles Grau */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  }
+
+  .remove-item {
+    width: auto; /* Die Breite passt sich dem Inhalt an */
+    padding: 5px; /* Fügt Padding hinzu */
+    margin: 5px;
+    font-size: 0.875em; /* Kleinere Schriftgröße */
+    background: red; /* Roter Hintergrund */
+    color: white; /* Weißer Text */
+    border: none; /* Kein Rand */
+    cursor: pointer; /* Zeigt den Pointer-Cursor an */
+    border-radius: 5px; /* Abgerundete Ecken */
+  }
+
+  /* Letzte Bestellung Styles */
+
+  #last-order {
+    margin-top: 20px; /* Fügt Abstand vom vorherigen Abschnitt hinzu */
+    padding: 20px; /* Fügt Padding hinzu */
+    background-color: #f9f9f9; /* Ein anderes helles Grau */
+    border: 1px solid #ddd; /* Fügt einen feinen grauen Rand hinzu */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  }
+
+  #order-details h2 {
+    color: #f8b400; /* Gelb */
+    margin-bottom: 10px; /* Abstand vom Titel */
+  }
+
+  #order-details p {
+    margin: 5px 0; /* Abstand oben und unten */
+  }
+
+  #order-details ul {
+    padding-left: 20px; /* Fügt Padding für Listen hinzu */
+  }
+
+  #order-details li {
+    margin: 5px 0; /* Abstand in der Liste */
+  }
+
+  /* Footer Styles*/
+
+  footer {
+    padding: 20px; /* Fügt Padding hinzu */
+    background-color: #f4f4f4; /* Helles Grau */
+    margin-top: 40px; /* Abstand vom Hauptinhalt */
+  }
+
+  /* Warenkorb page - Styles */
+
+  /* Formular-Styling */
+
+  form {
+    max-width: 400px; /* Maximale Breite des Formulars */
+    margin: 20px auto; /* Zentriert das Formular und fügt oben und unten Abstand hinzu */
+    padding: 20px; /* Innenabstand */
+    background: #ffffff; /* Weißer Hintergrund */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    display: flex; /* Flexbox für das Formular */
+    flex-direction: column; /* Anordnung der Formularelemente von oben nach unten */
+    gap: 15px; /* Abstand zwischen den Elementen */
+  }
+
+  form h2 {
+    text-align: center; /* Zentriert den Titel */
+    color: #333; /* Setzt die Farbe des Titels */
+  }
+
+  form label {
+    font-size: 14px; /* Kleinere Schriftgröße */
+    font-weight: bold; /* Fett */
+    color: #555; /* Graue Farbe */
+  }
+
+  input,
+  button {
+    padding: 10px; /* Fügt Padding hinzu */
+    font-size: 16px; /* Größere Schrift */
+    border: 1px solid #ddd; /* Grauer Rand */
+    border-radius: 5px; /* Abgerundete Ecken */
+  }
+
+  input:focus {
+    outline: none; /* Entfernt den Standard-Fokus-Rahmen */
+    border-color: #f8b400; /* Gelbe Farbe, wenn fokussiert */
+    box-shadow: 0 0 5px rgba(248, 180, 0, 0.5); /* Gelber Schatten beim Fokus */
+  }
+
+  button[type=submit] {
+    background-color: #f8b400; /* Gelb */
+    color: white; /* Weißer Text */
+    cursor: pointer; /* Zeigt den Pointer-Cursor an */
+    transition: background-color 0.3s; /* Sanfter Übergang bei Hover */
+    border: none; /* Entfernt den Rand */
+  }
+
+  button[type=submit]:hover {
+    background-color: #e0a200; /* Ein dunkleres Gelb bei Hover */
+  }
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;  
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    .content-wrapper {
+      max-width: 1200px;
+      width: 90%;
+    }
+
+    header nav a:hover {
+      color: #f8b400; /* Setzt die Farbe des Links beim Hover auf ein Gelb */
+    }
+
+    #menu .content-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    #menu h2 {
+      width: 100%;
+    }
+
+    .menu-item {
+      width: 35%;
+      margin: 40px;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px); /* Verschiebt das Element leicht nach oben bei Hover */
+      background-color: #f9f9f9; /* Ändert den Hintergrund bei Hover */
+    }
+
+    .menu-item img {
+      max-height: 275px;
+    }
+
+    .order-button:hover {
+      background-color: #218838; /* Setzt den Button-Hintergrund auf einen dunkleren Grünton bei Hover */
+    }
+
+    .remove-item:hover {
+      background: darkred; /* Dunklerer Rotschattton bei Hover */
+    }
+
+    #cart .content-wrapper {
+      max-width: 425px;
+      width: 85%;
+      margin: 20px 0;
+    }
+
+  }
+
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
