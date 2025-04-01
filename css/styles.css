@@ -187,7 +187,7 @@ textarea {
   }
 
   .order-button {
-    background-color: #28a745; /* Setzt den Hintergrund des Buttons auf Grün */
+    background-color: #dd8c0fd1; /* Setzt den Hintergrund des Buttons */
     color: #000000; /* Setzt die Textfarbe */
     border: none; /* Entfernt den Rand des Buttons */
     padding: 10px 15px; /* Fügt Padding hinzu */
@@ -469,7 +469,7 @@ textarea {
     }
 
     .order-button:hover {
-      background-color: #218838; /* Setzt den Button-Hintergrund auf einen dunkleren Grünton bei Hover */
+      background-color: #e9d826; /* Setzt den Button-Hintergrund beim Hover */
     }
 
     .remove-item:hover {
