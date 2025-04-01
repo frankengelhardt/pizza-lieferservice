@@ -244,8 +244,8 @@ textarea {
     padding: 5px; /* Fügt Padding hinzu */
     margin: 5px;
     font-size: 0.875em; /* Kleinere Schriftgröße */
-    background: red; /* Roter Hintergrund */
-    color: white; /* Weißer Text */
+    background: #ff9b00; /* Orange Hintergrund */
+    color: #000000; /* Schwarzer Text */
     border: none; /* Kein Rand */
     cursor: pointer; /* Zeigt den Pointer-Cursor an */
     border-radius: 5px; /* Abgerundete Ecken */
@@ -330,7 +330,7 @@ textarea {
 
   button[type=submit] {
     background-color: #f8b400; /* Gelb */
-    color: white; /* Weißer Text */
+    color: #000000; /* Schwarzer Text */
     cursor: pointer; /* Zeigt den Pointer-Cursor an */
     transition: background-color 0.3s; /* Sanfter Übergang bei Hover */
     border: none; /* Entfernt den Rand */
