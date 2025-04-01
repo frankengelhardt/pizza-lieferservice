@@ -133,11 +133,11 @@ textarea {
   }
 
   h1 {
-    color: #f8b400; /* Setzt die Textfarbe auf Gelb */
+    color: #d70505;
   }
 
   h3 {
-    color: #f8b400;
+    color: #d70505;
   }
 
   /*---------------------- Mobile Styles --------------------*/
@@ -183,12 +183,12 @@ textarea {
 
   .price {
     font-weight: bold; /* Macht den Preis fett */
-    color: #f8b400; /* Setzt den Preis in Gelb */
+    color: #d70505;
   }
 
   .order-button {
     background-color: #28a745; /* Setzt den Hintergrund des Buttons auf Grün */
-    color: white; /* Setzt die Textfarbe auf Weiß */
+    color: #000000; /* Setzt die Textfarbe */
     border: none; /* Entfernt den Rand des Buttons */
     padding: 10px 15px; /* Fügt Padding hinzu */
     cursor: pointer; /* Ändert den Cursor beim Überfahren des Buttons */
