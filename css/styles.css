@@ -483,6 +483,20 @@ textarea {
     }
 
   }
+  
+  #close-cart {
+  position: absolute;
+  top: 10px; /* Abstand vom oberen Rand */
+  left: 10px; /* Abstand vom linken Rand */
+  background-color: transparent; /* Kein Hintergrund */
+  border: none; /* Kein Rahmen */
+  font-size: 1.5em; /* Schriftgröße für das "X" */
+  cursor: pointer; /* Zeigt den Cursor als Zeiger */
+}
+
+#close-cart:hover {
+  color: red; /* Farbe des Symbols beim Hover */
+}
 
 
 @media print,

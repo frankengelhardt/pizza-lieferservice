@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartList = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
     const cartContainer = document.getElementById("cart-homepage");
+    const closeButton = document.getElementById("close-cart");
     const orderDetailsContainer = document.getElementById("order-details");
 
     // Warenkorb aus dem localStorage laden, wenn vorhanden, ansonsten ein leeres Array erstellen
@@ -52,9 +53,20 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCart();
 
             // Warenkorb anzeigen
-            cartContainer.classList.add("show");
+            if (cartContainer) {
+                cartContainer.classList.add("show");
+            }
         });
     });
+
+    // Event-Listener für den Schließen-Button hinzufügen
+    if (closeButton) {
+        closeButton.addEventListener("click", () => {
+            if (cartContainer) {
+                cartContainer.classList.remove("show"); // Entfernt die Klasse, die den Warenkorb sichtbar macht
+            }
+        });
+    }
 
     // Event-Listener für das Entfernen von Artikeln hinzufügen
     if (cartList) {
@@ -98,10 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             orderDetailsHTML += `</ul><p>Gesamtpreis: ${orderData.total} €</p>`;
-            orderDetailsContainer.innerHTML = orderDetailsHTML;
+            if (orderDetailsContainer) {
+                orderDetailsContainer.innerHTML = orderDetailsHTML;
+            }
 
             localStorage.removeItem("orderData"); // Bestellung nach dem Anzeigen löschen
-        } else {
+        } else if (orderDetailsContainer) {
             orderDetailsContainer.innerHTML = "<p>Keine vorherige Bestellung gefunden.</p>";
         }
     }
@@ -115,7 +129,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // Funktion zum Aktualisieren des Jahres im Footer
 function updateFooterYear() {
     const currentYear = new Date().getFullYear();
-    document.getElementById("currentYear").textContent = currentYear;
+    const footerYearElement = document.getElementById("currentYear");
+    if (footerYearElement) {
+        footerYearElement.textContent = currentYear;
+    }
 }
 
 function init() {
